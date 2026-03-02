@@ -1,0 +1,55 @@
+# the i3 config
+set $mod Mod4
+set $term kitty
+
+# a blue color
+set $blue #31748f
+set $bg #191724
+
+gaps inner 15
+gaps outer 5
+# smart_gaps off # looks better with gaps even for 1 win
+for_window [class=".*"] border pixel 0
+
+# window colors
+client.focused $blue $blue #ffffff $blue $blue
+client.unfocused #000000 #000000 #b1b1b1 #000000 #000000
+
+# basic stuff
+bindsym $mod+Return exec $term
+bindsym $mod+d exec dmenu_run -p 'run:'
+bindsym $mod+Shift+q kill
+bindsym $mod+Shift+e exec i3-msg exit
+
+# vim keys cause im used to it
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# move shit around
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# workspaces
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+
+bar {
+    status_command i3status
+    position top
+    height 25
+    font pango:Inter 10
+    colors {
+        background #000000aa
+        statusline #ffffff
+    }
+}
+
+# autostart
+exec_always --no-startup-id feh --bg-fill ~/wallpapers/current.jpg
+exec_always --no-startup-id picom -b
+exec --no-startup-id nm-applet

@@ -1,0 +1,83 @@
+{
+    "$schema": "https://github.com",
+    "logo": {
+        "type": "small",
+        "padding": {
+            "top": 2,
+            "left": 3
+        },
+        "color": {
+            "1": "blue" 
+        }
+    },
+    "display": {
+        "separator": "    ",
+        "color": {
+            "keys": "blue",
+            "title": "white"
+        },
+        "key": {
+            "width": 15
+        }
+    },
+    "modules": [
+        {
+            "type": "title",
+            "color": {
+                "user": "blue",
+                "at": "white",
+                "host": "blue"
+            }
+        },
+        {
+            "type": "separator",
+            "string": "━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+        },
+        {
+            "type": "os",
+            "key": "    OS     ",
+            "format": "{3} {10}"
+        },
+        {
+            "type": "kernel",
+            "key": "    KERNEL ",
+            "format": "{2}"
+        },
+        {
+            "type": "uptime",
+            "key": "    UPTIME ",
+            "format": "{1}h {2}m"
+        },
+        {
+            "type": "packages",
+            "key": "    PKGS   ",
+            "format": "{1} (pacman)"
+        },
+        {
+            "type": "wm",
+            "key": "    WM     ",
+            "format": "{1} (+picom)"
+        },
+        {
+            "type": "terminal",
+            "key": "    TERM   ",
+            "format": "{1} (glass)"
+        },
+        {
+            "type": "memory",
+            "key": "    RAM    ",
+            "format": "{1} / {2}"
+        },
+        {
+            "type": "separator",
+            "string": "━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+        },
+        {
+            "type": "colors",
+            "symbol": "circle",
+            "block": {
+                "range": [1, 6]
+            }
+        }
+    ]
+}
